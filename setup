@@ -1,0 +1,6 @@
+#!/bin/bash
+
+wget http://www.jfugue.org/jfugue-5.0.9.jar &&
+    mvn install:install-file -DlocalRepositoryPath=repo -DcreateChecksum=true -Dpackaging=jar -Dfile=jfugue-5.0.9.jar -DgroupId=jfugue -DartifactId=jfugue -Dversion=5.0.9 &&
+    rm jfugue-5.0.9.jar
+    
