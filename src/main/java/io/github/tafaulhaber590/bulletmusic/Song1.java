@@ -12,15 +12,23 @@ public class Song1
 {
     public static void main( String[] args )
     {
-        Pattern bass = new Pattern("Ab3i Ab3i Bb3q Ab3q Ab3i Ab3i | Ab3i Ab3i Bb3q Ab3q Ab3i Ab3i");
-        bass.add("F3i F3i G3q F3q F3i F3i | F3i F3i G3q F3q F3i F3i");
-        bass.setInstrument("ELECTRIC_BASS_PICK");
-        bass.setTempo(300);
+        Rhythm rhythm = new Rhythm(".O..O*...OOOO*.*");
+        Pattern drums = rhythm.getPattern().repeat(16).setTempo(240);
 
-        Rhythm percussion = new Rhythm("OOO.O.OOOOO.O.OO");
-        Pattern percPattern = percussion.getPattern().setTempo(300);
+        Pattern melody = new Pattern( "ri A4q ri B4i C5i B4i ri | A4q A4i B4q C5i B4i ri")
+                                .add( "ri G4q ri A4i B4i A4i ri | G4q G4i A4q B4i A4i ri");
+        Pattern harmony = new Pattern("ri G5q ri A5i B5i A5i ri | G5q G5i A5q B5i A5i ri")
+                                .add( "ri A5q ri B5i C6i B5i ri | A5q A5i B5q C6i B5i ri");
 
+
+        Pattern full = new Pattern("V0 I[SAWTOOTH] rw")
+                                    .repeat(4)
+                                    .add(melody.repeat(7))
+                                    .add(new Pattern("V1 I[SAWTOOTH] rw").repeat(10))
+                                    .add(harmony.repeat(7))
+                                    .setTempo(240);
+        
         Player player = new Player();
-        player.play(bass.repeat(4), percPattern.repeat(8));
+        player.play(full, drums);
     }
 }
