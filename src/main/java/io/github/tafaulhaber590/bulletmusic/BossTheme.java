@@ -9,7 +9,7 @@ public class BossTheme extends Song {
     {
         // The boss fight theme
         // Original work
-        Pattern drums = new Rhythm("*......O*......O").getPattern().setTempo(200).repeat(12);
+        Pattern drums = new Rhythm("^......O^......O").getPattern().setTempo(200).repeat(12);
 
         Pattern bass = new Pattern("V1 I[ACOUSTIC_BASS]      G3i  G3i  G3i  G3i  G3i  G3i  F3i F3i")
                                 .repeat(2)

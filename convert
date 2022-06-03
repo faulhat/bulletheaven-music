@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for midi in out/*.mid
+do
+    timidity -Ow -o - $midi | lame - "${midi}.mp3"
+done

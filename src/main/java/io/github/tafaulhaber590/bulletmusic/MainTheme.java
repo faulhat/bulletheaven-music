@@ -8,8 +8,8 @@ public class MainTheme extends Song {
     {
         // The main overworld theme
         // Original work
-        Rhythm rhythm = new Rhythm(".O..O*...OOOO*.*");
-        Pattern drums = rhythm.getPattern().repeat(16);
+        Rhythm rhythm = new Rhythm(".O..O^...OOOO^.^");
+        Pattern drums = rhythm.getPattern().repeat(8);
 
         Pattern melody = new Pattern(  "ri A4q ri B4i C5i B4i ri | A4q A4i B4q C5i B4i ri")
                                 .add(  "ri G4q ri A4i B4i A4i ri | G4q G4i A4q B4i A4i ri");
