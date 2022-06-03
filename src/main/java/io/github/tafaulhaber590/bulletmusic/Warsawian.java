@@ -2,7 +2,7 @@ package io.github.tafaulhaber590.bulletmusic;
 
 import org.jfugue.pattern.Pattern;
 
-public class Warsawian implements Song {
+public class Warsawian extends Song {
     public Pattern getPattern()
     {
         // The main title theme

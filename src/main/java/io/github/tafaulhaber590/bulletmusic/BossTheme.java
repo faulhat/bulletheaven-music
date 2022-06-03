@@ -4,7 +4,7 @@ import org.jfugue.pattern.Pattern;
 import org.jfugue.rhythm.Rhythm;
 import org.jfugue.theory.ChordProgression;
 
-public class BossTheme implements Song {
+public class BossTheme extends Song {
     public Pattern getPattern()
     {
         // The boss fight theme

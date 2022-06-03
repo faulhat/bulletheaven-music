@@ -3,7 +3,7 @@ package io.github.tafaulhaber590.bulletmusic;
 import org.jfugue.pattern.Pattern;
 import org.jfugue.rhythm.Rhythm;
 
-public class MainTheme implements Song {
+public class MainTheme extends Song {
     public Pattern getPattern()
     {
         // The main overworld theme
