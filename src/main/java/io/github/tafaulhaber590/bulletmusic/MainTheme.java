@@ -18,10 +18,10 @@ public class MainTheme extends Song {
                                 .add(  "ri A5q ri B5i C6i B5i ri | A5q A5i B5q C6i B5i ri");
 
 
-        Pattern full = new Pattern("V0 I[SAWTOOTH] rw")
+        Pattern full = new Pattern("V0 rw")
                                     .repeat(4)
                                     .add(melody.repeat(7))
-                                    .add(new Pattern("V1 I[SAWTOOTH] rw").repeat(10))
+                                    .add(new Pattern("V1 I[SQUARE] rw").repeat(10))
                                     .add(harmony.repeat(6))
                                     .add(harmony1)
                                     .add(drums)

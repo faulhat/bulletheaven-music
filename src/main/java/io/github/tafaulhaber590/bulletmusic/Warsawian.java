@@ -7,7 +7,7 @@ public class Warsawian extends Song {
     {
         // The main title theme
         // A copy of the Polish song "Whirlwinds of Danger"
-        Pattern song = new Pattern("T240 I[SQUARE]   D5q D5is C5s Bb4q Bb4is A4s")
+        Pattern song = new Pattern("T160 I[SQUARE]   D5q D5is C5s Bb4q Bb4is A4s")
                                                .add("G4q G4is F#4s G4q Bb4q")
                                                .add("A4q D5is D5s D5i C5i Bb4i A4i")
                                                .add("G4i A4i Bb4i C5i D5h")
