@@ -1,19 +1,15 @@
 package io.github.tafaulhaber590.bulletmusic;
 
 import org.jfugue.pattern.Pattern;
-import org.jfugue.player.Player;
 import org.jfugue.rhythm.Rhythm;
 
-/**
- * Hello world!
- *
- */
-public class Song1 
-{
-    public static void main( String[] args )
+public class MainTheme implements Song {
+    public Pattern getPattern()
     {
+        // The main overworld theme
+        // Original work
         Rhythm rhythm = new Rhythm(".O..O*...OOOO*.*");
-        Pattern drums = rhythm.getPattern().repeat(16).setTempo(240);
+        Pattern drums = rhythm.getPattern().repeat(16);
 
         Pattern melody = new Pattern(  "ri A4q ri B4i C5i B4i ri | A4q A4i B4q C5i B4i ri")
                                 .add(  "ri G4q ri A4i B4i A4i ri | G4q G4i A4q B4i A4i ri");
@@ -28,9 +24,9 @@ public class Song1
                                     .add(new Pattern("V1 I[SAWTOOTH] rw").repeat(10))
                                     .add(harmony.repeat(6))
                                     .add(harmony1)
-                                    .setTempo(240);
+                                    .add(drums)
+                                    .setTempo(180);
         
-        Player player = new Player();
-        player.play(full, drums);
+        return new Pattern(full, drums);
     }
 }
